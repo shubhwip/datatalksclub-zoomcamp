@@ -1,4 +1,4 @@
-## Problem Statment
+## Problem Statment
 
 https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2024/01-docker-terraform/homework.md
 
@@ -8,15 +8,15 @@ docker run  -it --name dtc --restart=always -p 5433:5432 -e POSTGRES_PASSWORD=lo
 ```
 
 
-## Login to db
+## Login to db
 
 ```
 psql -h localhost -p 5433 -U local -d local 
 ```
 
-## Create tables
+## Create tables
 
-### Zones
+### Zones
 ```
 CREATE TABLE zones (
   LocationID INT, 
@@ -64,7 +64,7 @@ psql -h localhost -p 5433 -U local -d local  -c "\copy trips (VendorID,lpep_pick
 ```
 
 
-## Count records
+## Count records
 
 How many taxi trips were totally made on September 18th 2019?
 
@@ -84,7 +84,7 @@ Which was the pick up day with the largest trip distance Use the pick up time fo
  select lpep_pickup_datetime from trips order by trip_distance desc limit 1;
 ```
 
-### Three biggest pick up Boroughs
+### Three biggest pick up Boroughs
 
 Consider lpep_pickup_datetime in '2019-09-18' and ignoring Borough has Unknown
 
